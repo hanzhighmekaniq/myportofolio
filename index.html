@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio | Full-Stack Web Developer</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <style>
+      body { font-family: 'Montserrat', sans-serif; }
+      .glass {
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(100, 116, 139, 0.2);
+      }
+      .bg-animate {
+        background: linear-gradient(120deg, #6366f1, #0ea5e9, #a21caf, #f472b6, #6366f1);
+        background-size: 300% 300%;
+        animation: gradientMove 10s ease-in-out infinite;
+      }
+      @keyframes gradientMove {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+      }
+      .scroll-fade {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s cubic-bezier(.4,0,.2,1);
+      }
+      .scroll-fade.visible {
+        opacity: 1;
+        transform: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-950 text-white min-h-screen relative">
+    <!-- Background Gradient Animation -->
+    <div class="fixed inset-0 -z-10 bg-animate opacity-40"></div>
+    <!-- Header -->
+    <header class="glass fixed top-0 left-0 w-full flex items-center justify-between px-8 py-4 z-20 shadow-lg">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl font-bold text-indigo-400">Portofolio</span>
+      </div>
+      <nav class="hidden md:flex gap-8 text-gray-200 font-semibold">
+        <a href="#home" class="hover:text-indigo-400 transition">Home</a>
+        <a href="#about" class="hover:text-indigo-400 transition">About</a>
+        <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
+        <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+      </nav>
+      <a href="#contact" class="md:block hidden px-5 py-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-bold shadow-lg hover:scale-105 transition-transform">Hire Me</a>
+      <button class="md:hidden text-2xl"><i class="fa fa-bars"></i></button>
+    </header>
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-16 flex flex-col items-center justify-center min-h-[80vh] text-center relative">
+      <div class="relative group">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" class="w-40 h-40 rounded-full border-4 border-indigo-500 shadow-xl transform group-hover:scale-105 transition-transform duration-500" />
+        <div class="absolute inset-0 rounded-full bg-indigo-500 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+      </div>
+      <h1 class="mt-8 text-4xl md:text-6xl font-bold text-indigo-400 scroll-fade">Full-Stack Web Developer</h1>
+      <h2 class="mt-2 text-xl md:text-2xl text-gray-300 scroll-fade">Web & Familiar with Desktop Development</h2>
+      <p class="mt-6 max-w-2xl mx-auto text-gray-400 scroll-fade">
+        Passionate Full-Stack Web Developer with strong expertise in building and optimizing web applications. Skilled in both frontend and backend development, specializing in designing scalable, efficient, and user-friendly solutions. Experienced in working with modern frameworks and tools to enhance performance and usability. Capable of handling basic desktop applications and has minimal experience with IoT development.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4 scroll-fade">
+        <span class="px-4 py-2 bg-indigo-600 rounded-full shadow-lg hover:bg-indigo-700 transition-colors duration-300">Laravel</span>
+        <span class="px-4 py-2 bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300">Tailwind CSS</span>
+        <span class="px-4 py-2 bg-green-600 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">Node.js</span>
+        <span class="px-4 py-2 bg-yellow-600 rounded-full shadow-lg hover:bg-yellow-700 transition-colors duration-300">Java (Basic Desktop)</span>
+        <span class="px-4 py-2 bg-pink-600 rounded-full shadow-lg hover:bg-pink-700 transition-colors duration-300">Basic IoT & AI Knowledge</span>
+      </div>
+      <a href="#contact" class="mt-10 inline-block px-8 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-bold shadow-lg hover:scale-105 transition-transform scroll-fade">Contact Me</a>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="max-w-3xl mx-auto py-20 px-4 scroll-fade">
+      <h2 class="text-3xl font-bold text-indigo-300 mb-6">About Me</h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Saya adalah developer yang selalu ingin belajar hal baru, suka tantangan, dan senang membangun solusi digital yang berdampak. Saya terbiasa bekerja dengan tim maupun individu, dan selalu berusaha memberikan hasil terbaik.
+      </p>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="max-w-4xl mx-auto py-20 px-4 scroll-fade">
+      <h2 class="text-3xl font-bold text-indigo-300 mb-8">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="glass p-6 rounded-xl flex flex-col items-center shadow-lg hover:scale-105 transition-transform">
+          <i class="fab fa-laravel text-4xl text-red-500 mb-2"></i>
+          <span class="font-semibold">Laravel</span>
+        </div>
+        <div class="glass p-6 rounded-xl flex flex-col items-center shadow-lg hover:scale-105 transition-transform">
+          <i class="fa-brands fa-css3-alt text-4xl text-blue-400 mb-2"></i>
+          <span class="font-semibold">Tailwind CSS</span>
+        </div>
+        <div class="glass p-6 rounded-xl flex flex-col items-center shadow-lg hover:scale-105 transition-transform">
+          <i class="fab fa-node-js text-4xl text-green-400 mb-2"></i>
+          <span class="font-semibold">Node.js</span>
+        </div>
+        <div class="glass p-6 rounded-xl flex flex-col items-center shadow-lg hover:scale-105 transition-transform">
+          <i class="fab fa-java text-4xl text-yellow-400 mb-2"></i>
+          <span class="font-semibold">Java (Basic Desktop)</span>
+        </div>
+        <div class="glass p-6 rounded-xl flex flex-col items-center shadow-lg hover:scale-105 transition-transform">
+          <i class="fa-solid fa-microchip text-4xl text-pink-400 mb-2"></i>
+          <span class="font-semibold">Basic IoT</span>
+        </div>
+        <div class="glass p-6 rounded-xl flex flex-col items-center shadow-lg hover:scale-105 transition-transform">
+          <i class="fa-solid fa-brain text-4xl text-indigo-400 mb-2"></i>
+          <span class="font-semibold">Basic AI Knowledge</span>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-5xl mx-auto py-20 px-4 scroll-fade">
+      <h2 class="text-3xl font-bold text-indigo-300 mb-8">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform group">
+          <img src="https://source.unsplash.com/400x250/?website,code" class="w-full h-40 object-cover group-hover:brightness-90 transition" alt="Project 1">
+          <div class="p-5">
+            <h3 class="text-xl font-bold mb-2">Modern Web App</h3>
+            <p class="text-gray-300 mb-4">A modern web application built with Laravel & Tailwind CSS.</p>
+            <a href="#" class="text-indigo-400 hover:underline">View Demo</a>
+          </div>
+        </div>
+        <div class="glass rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform group">
+          <img src="https://source.unsplash.com/400x250/?dashboard,ui" class="w-full h-40 object-cover group-hover:brightness-90 transition" alt="Project 2">
+          <div class="p-5">
+            <h3 class="text-xl font-bold mb-2">Dashboard System</h3>
+            <p class="text-gray-300 mb-4">Interactive dashboard with real-time data and beautiful UI.</p>
+            <a href="#" class="text-indigo-400 hover:underline">View Demo</a>
+          </div>
+        </div>
+        <div class="glass rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform group">
+          <img src="https://source.unsplash.com/400x250/?iot,technology" class="w-full h-40 object-cover group-hover:brightness-90 transition" alt="Project 3">
+          <div class="p-5">
+            <h3 class="text-xl font-bold mb-2">IoT Mini Project</h3>
+            <p class="text-gray-300 mb-4">Simple IoT project with basic AI integration.</p>
+            <a href="#" class="text-indigo-400 hover:underline">View Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-2xl mx-auto py-20 px-4 scroll-fade">
+      <h2 class="text-3xl font-bold text-indigo-300 mb-8">Contact</h2>
+      <form class="flex flex-col gap-4 glass p-8 rounded-xl shadow-lg">
+        <input type="text" placeholder="Your Name" class="px-4 py-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400" required>
+        <input type="email" placeholder="Your Email" class="px-4 py-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400" required>
+        <textarea placeholder="Your Message" class="px-4 py-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400" rows="4" required></textarea>
+        <button type="submit" class="mt-2 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-bold shadow-lg hover:scale-105 transition-transform">Send Message</button>
+      </form>
+    </section>
+    <!-- Sticky Hire Me Button (Mobile) -->
+    <a href="#contact" class="fixed bottom-6 right-6 z-30 md:hidden px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-bold shadow-lg hover:scale-110 transition-transform">Hire Me</a>
+    <!-- Footer -->
+    <footer class="glass mt-20 py-6 px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-sm">
+      <div>&copy; 2024 Your Name. All rights reserved.</div>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-indigo-400"><i class="fab fa-github text-xl"></i></a>
+        <a href="#" class="hover:text-indigo-400"><i class="fab fa-linkedin text-xl"></i></a>
+        <a href="#" class="hover:text-indigo-400"><i class="fab fa-instagram text-xl"></i></a>
+        <a href="#" class="hover:text-indigo-400"><i class="fab fa-twitter text-xl"></i></a>
+      </div>
+    </footer>
+    <!-- Scroll Reveal Animation Script -->
+    <script>
+      function revealOnScroll() {
+        document.querySelectorAll('.scroll-fade').forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 80) {
+            el.classList.add('visible');
+          }
+        });
+      }
+      window.addEventListener('scroll', revealOnScroll);
+      window.addEventListener('DOMContentLoaded', revealOnScroll);
+    </script>
+  </body>
+</html> 
